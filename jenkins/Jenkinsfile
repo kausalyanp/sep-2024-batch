@@ -16,5 +16,12 @@ pipeline {
                 sh 'echo "im deploying an image in kuberenets"'
             }
         }
+        stage('cpu'){
+            steps{
+                sh '''
+                    lscpu
+                '''
+            }
+        }
     }
 }
